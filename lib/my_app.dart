@@ -24,6 +24,11 @@ class MyApp extends StatelessWidget {
           primary: Color(0xffffa585),
           secondary: Color(0xffffeda0),
         ),
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(fontSize: 22.0),
+          bodyMedium: TextStyle(fontSize: 20.0),
+        ),
+        buttonTheme: const ButtonThemeData(textTheme: ButtonTextTheme.normal),
       ),
       darkTheme: ThemeData(
         useMaterial3: true,

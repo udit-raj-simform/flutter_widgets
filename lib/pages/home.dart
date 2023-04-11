@@ -1,5 +1,4 @@
 import 'package:flutter_widgets/utils/exports.dart';
-import 'package:flutter_widgets/widgets/background/custom/custom_scaffold.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -24,6 +23,7 @@ class Home extends StatelessWidget {
             padding: const EdgeInsets.all(15.0),
             children: const [
               ListViewChildHome(widgetName: 'Container', path: ContainerPage()),
+              ListViewChildHome(widgetName: 'AppBar', path: AppBarPage()),
             ],
           ),
         ),
