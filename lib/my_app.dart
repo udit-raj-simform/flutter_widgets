@@ -1,4 +1,3 @@
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_widgets/utils/exports.dart';
 
 class MyApp extends StatelessWidget {
@@ -16,8 +15,26 @@ class MyApp extends StatelessWidget {
       title: "Flutter Widgets",
       onGenerateTitle: returnTitle(),
       color: Colors.lightGreenAccent,
-      theme: ThemeData.light(useMaterial3: true),
-      darkTheme: ThemeData.dark(useMaterial3: true),
+      theme: ThemeData(
+        useMaterial3: true,
+        fontFamily: 'cursive',
+        focusColor: Colors.lightGreenAccent,
+        // brightness: Brightness.light,
+        colorScheme: const ColorScheme.light(
+          primary: Color(0xffffa585),
+          secondary: Color(0xffffeda0),
+        ),
+      ),
+      darkTheme: ThemeData(
+        useMaterial3: true,
+        fontFamily: 'cursive',
+        focusColor: Colors.lightGreenAccent,
+        // brightness: Brightness.dark,
+        colorScheme: const ColorScheme.dark(
+          primary: Color(0xffffa585),
+          secondary: Color(0xffffeda0),
+        ),
+      ),
       themeMode: (DateTime.now().hour <= 12) ? ThemeMode.light : ThemeMode.dark,
       locale: const Locale("en", "IN"),
       localizationsDelegates: const [
