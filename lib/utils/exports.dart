@@ -9,6 +9,7 @@ export 'package:flutter_widgets/pages/appbar/sliver_appbar.dart';
 export 'package:flutter_widgets/pages/container/container.dart';
 export 'package:flutter_widgets/pages/container_page.dart';
 export 'package:flutter_widgets/pages/home.dart';
+export 'package:flutter_widgets/pages/text_filed.dart';
 export 'package:flutter_widgets/utils/constants.dart';
 export 'package:flutter_widgets/widgets/background/custom/custom_appbar.dart';
 export 'package:flutter_widgets/widgets/background/custom/custom_scaffold.dart';

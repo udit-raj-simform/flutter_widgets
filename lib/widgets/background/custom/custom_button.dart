@@ -9,13 +9,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {
-        if (onPressed != null) {
-          try {
-            onPressed;
-          } catch (e) {}
-        }
-      },
+      onPressed: onPressed,
       child: Text(
         title,
         style: const TextStyle(

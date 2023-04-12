@@ -152,6 +152,7 @@ class _ContainerPlaygroundPageState extends State<ContainerPlaygroundPage> {
                           padding = EdgeInsets.all(
                               double.parse(_paddingController.text));
                           updateCodeView(_editingController);
+                          _paddingController.text = "";
                           Navigator.of(context).pop();
                         });
                       },
@@ -226,6 +227,7 @@ class _ContainerPlaygroundPageState extends State<ContainerPlaygroundPage> {
                               ? double.parse(_heightController.text)
                               : null;
                           updateCodeView(_editingController);
+                          _heightController.text = "";
                           Navigator.of(context).pop();
                         });
                       },
@@ -242,6 +244,7 @@ class _ContainerPlaygroundPageState extends State<ContainerPlaygroundPage> {
                               ? double.parse(_widthController.text)
                               : null;
                           updateCodeView(_editingController);
+                          _widthController.text = "";
                           Navigator.of(context).pop();
                         });
                       },
@@ -256,8 +259,17 @@ class _ContainerPlaygroundPageState extends State<ContainerPlaygroundPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     CustomButton(
-                      title: 'Add Alignment',
-                      onPressed: () {},
+                      title: (alignment == null)
+                          ? 'Add Alignment'
+                          : 'Remove Alignment',
+                      onPressed: () {
+                        if (alignment == null) {
+                          alignment = Alignment.center;
+                        } else {
+                          alignment = null;
+                        }
+                        updateCodeView(_editingController);
+                      },
                     ),
                     CustomButton(
                       title: (transform == null)
@@ -297,6 +309,7 @@ class _ContainerPlaygroundPageState extends State<ContainerPlaygroundPage> {
                         } else {
                           margin = null;
                         }
+                        _widthController.text = "";
                         updateCodeView(_editingController);
                       },
                     ),

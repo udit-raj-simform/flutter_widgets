@@ -24,6 +24,7 @@ class Home extends StatelessWidget {
             children: const [
               ListViewChildHome(widgetName: 'Container', path: ContainerPage()),
               ListViewChildHome(widgetName: 'AppBar', path: AppBarPage()),
+              ListViewChildHome(widgetName: 'TextField', path: TextFieldPage()),
             ],
           ),
         ),
