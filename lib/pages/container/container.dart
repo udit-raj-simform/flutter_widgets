@@ -1,8 +1,7 @@
 import 'package:flutter_widgets/utils/exports.dart';
-import 'package:flutter_widgets/widgets/background/custom/custom_appbar.dart';
 
-class ContainerPage extends StatelessWidget {
-  const ContainerPage({Key? key}) : super(key: key);
+class ContainerPropertiesPage extends StatelessWidget {
+  const ContainerPropertiesPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
