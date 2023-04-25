@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: const ColorScheme.light(
           primary: Color(0xffffa585),
           secondary: Color(0xffffeda0),
+          background: Color(0xfff1bb89),
         ),
         textTheme: const TextTheme(
           bodyLarge: TextStyle(fontSize: 16.0),
@@ -38,10 +39,19 @@ class MyApp extends StatelessWidget {
         fontFamily: 'cursive',
         focusColor: Colors.lightGreenAccent,
         // brightness: Brightness.dark,
-        colorScheme: const ColorScheme.dark(
+        colorScheme: const ColorScheme.light(
           primary: Color(0xffffa585),
           secondary: Color(0xffffeda0),
+          background: Color(0xff001a11),
         ),
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(fontSize: 16.0),
+          bodyMedium: TextStyle(fontSize: 16.0),
+          labelLarge: TextStyle(fontSize: 16.0),
+          labelMedium: TextStyle(fontSize: 16.0),
+          displayLarge: TextStyle(fontSize: 16.0),
+        ),
+        buttonTheme: const ButtonThemeData(textTheme: ButtonTextTheme.normal),
       ),
       themeMode: (DateTime.now().hour <= 12) ? ThemeMode.light : ThemeMode.dark,
       locale: const Locale("en", "IN"),

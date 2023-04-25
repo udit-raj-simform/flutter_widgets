@@ -1,7 +1,4 @@
 import 'package:flutter_widgets/utils/exports.dart';
-import 'package:flutter_widgets/widgets/background/custom/code_view.dart';
-import 'package:flutter_widgets/widgets/background/custom/custom_alert_dialog.dart';
-import 'package:flutter_widgets/widgets/background/custom/custom_button.dart';
 
 class RegularAppBarPage extends StatefulWidget {
   const RegularAppBarPage({Key? key}) : super(key: key);
@@ -190,22 +187,32 @@ class _RegularAppBarPageState extends State<RegularAppBarPage> {
                     CustomButton(
                       title: "Change background",
                       onPressed: () {
-                        if (color == Colors.lightGreenAccent) {
-                          color = Colors.blueAccent;
-                        } else {
-                          color = Colors.lightGreenAccent;
-                        }
+                        CustomColorPicker().pickColor(
+                          context,
+                          color,
+                          BuildPickColor(
+                            color: color,
+                            onColorChanged: (color) => setState(
+                              () => this.color = color,
+                            ),
+                          ),
+                        );
                         updateCodeView(_editingController);
                       },
                     ),
                     CustomButton(
                       title: "Change foreground color",
                       onPressed: () {
-                        if (foreground == Colors.black) {
-                          foreground = Colors.white;
-                        } else {
-                          foreground = Colors.black;
-                        }
+                        CustomColorPicker().pickColor(
+                          context,
+                          foreground,
+                          BlockPickColor(
+                            color: foreground,
+                            onColorChanged: (color) => setState(
+                              () => foreground = color,
+                            ),
+                          ),
+                        );
                         updateCodeView(_editingController);
                       },
                     ),

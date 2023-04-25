@@ -1,7 +1,4 @@
 import 'package:flutter_widgets/utils/exports.dart';
-import 'package:flutter_widgets/widgets/background/custom/code_view.dart';
-import 'package:flutter_widgets/widgets/background/custom/custom_alert_dialog.dart';
-import 'package:flutter_widgets/widgets/background/custom/custom_button.dart';
 
 class ContainerPlaygroundPage extends StatefulWidget {
   const ContainerPlaygroundPage({Key? key}) : super(key: key);
@@ -133,11 +130,16 @@ class _ContainerPlaygroundPageState extends State<ContainerPlaygroundPage> {
                     CustomButton(
                       title: 'Change Color',
                       onPressed: () {
-                        if (color == Colors.pinkAccent) {
-                          color = Colors.blueAccent;
-                        } else {
-                          color = Colors.pinkAccent;
-                        }
+                        CustomColorPicker().pickColor(
+                          context,
+                          color,
+                          BuildPickColor(
+                            color: color,
+                            onColorChanged: (color) => setState(
+                              () => this.color = color,
+                            ),
+                          ),
+                        );
                         updateCodeView(_editingController);
                       },
                     ),
@@ -316,11 +318,11 @@ class _ContainerPlaygroundPageState extends State<ContainerPlaygroundPage> {
                     CustomButton(
                       title: (clip == Clip.none) ? 'Add Clip' : 'Remove Clip',
                       onPressed: () {
-                        if (clip == Clip.none) {
-                          clip = Clip.antiAlias;
-                        } else {
-                          clip = Clip.none;
-                        }
+                        // if (clip == Clip.none) {
+                        //   clip = Clip.antiAlias;
+                        // } else {
+                        //   clip = Clip.none;
+                        // }
                         updateCodeView(_editingController);
                       },
                     ),

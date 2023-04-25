@@ -12,4 +12,6 @@ mixin MyConstants {
   static const marginAll = EdgeInsets.all(10.0);
   static const marginSym = EdgeInsets.symmetric(horizontal: 10, vertical: 20);
   static const borderRadius = BorderRadius.all(Radius.circular(25));
+
+  static const dataUrl = "https://jsonplaceholder.typicode.com/users";
 }
